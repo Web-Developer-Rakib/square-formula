@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NewFormula from "./components/NewFormula/NewFormula";
+import OldFormula from "./components/OldFormula/OldFormula";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="heading">Old formula</h1>
+      <OldFormula></OldFormula>
+      <h1 className="heading">New formula</h1>
+      <NewFormula></NewFormula>
     </div>
   );
 }
