@@ -13,7 +13,6 @@ const NewFormula = () => {
           )<sup>2</sup>
         </span>
         <span>=</span>
-
         <span>c</span>
         <sup>2</sup>
         <span>=</span>
