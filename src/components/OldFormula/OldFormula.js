@@ -5,7 +5,6 @@ import "./OldFormula.css";
 const OldFormula = () => {
   const a = useSelector((state) => state.aReducer.a);
   const b = useSelector((state) => state.bReducer.b);
-  console.log(a, b);
   return (
     <div className="oldFormula">
       <h3>{a === "" ? "a" : a}</h3>

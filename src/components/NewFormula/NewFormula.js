@@ -1,19 +1,23 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./NewFormula.css";
 
 const NewFormula = () => {
+  const a = useSelector((state) => state.aReducer.a);
+  const b = useSelector((state) => state.bReducer.b);
+  const c = parseFloat(a) + parseFloat(b);
   return (
     <div className="newFormula">
       <h3>
         <span>(</span>
-        <span>a</span>
+        <span>{a === "" ? "a" : a}</span>
         <span>+</span>
-        <span>b</span>
+        <span>{b === "" ? "b" : b}</span>
         <span>
           )<sup>2</sup>
         </span>
         <span>=</span>
-        <span>c</span>
+        <span>{isNaN(c) ? "c" : c}</span>
         <sup>2</sup>
         <span>=</span>
         <span>?</span>
