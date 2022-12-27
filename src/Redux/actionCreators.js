@@ -8,5 +8,5 @@ export const bValue = (value) => {
 };
 
 export const Answer = (value) => {
-  return { type: actionTypes.Answer, payload: value };
+  return { type: actionTypes.ANSWER, payload: value };
 };

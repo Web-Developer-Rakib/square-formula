@@ -1,10 +1,14 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { aValue, bValue } from "../../Redux/actionCreators";
+import { useDispatch, useSelector } from "react-redux";
+import { Answer, aValue, bValue } from "../../Redux/actionCreators";
 import "./Values.css";
 
 const Values = () => {
   const dispatch = useDispatch();
+  const a = useSelector((state) => state.aReducer.a);
+  const b = useSelector((state) => state.bReducer.b);
+
+  const abSum = parseFloat(a) + parseFloat(b);
 
   return (
     <div className="values">
@@ -26,7 +30,9 @@ const Values = () => {
           />
         </h3>
       </div>
-      <button class="button-70">Get Answers</button>
+      <button class="button-70" onClick={() => dispatch(Answer(abSum))}>
+        Get Answers
+      </button>
     </div>
   );
 };

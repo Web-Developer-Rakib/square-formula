@@ -1,12 +1,15 @@
 import * as actionTypes from "../actionTypes";
 
-const InitalState = "";
+const InitalState = {
+  ans: "?",
+};
+
 const answersReducer = (state = InitalState, action) => {
   switch (action.type) {
-    case actionTypes.Answer:
+    case actionTypes.ANSWER:
       return {
         ...state,
-        username: action.username,
+        ans: action.payload ** 2,
       };
     default:
       return state;
